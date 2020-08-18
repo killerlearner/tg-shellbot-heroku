@@ -9,15 +9,16 @@ RUN apt-get update && apt-get install -y \
     curl \
     sudo \
     wget \
+    zip \
+    unzip \
     nmap \
     golang \
     clang \
     wget \
-    aria2* \
-    vim \
+    aria2 \
     tor \
-    python \
-    python-pip \
+    python3 \
+    python3-pip \
     git \
     make \
     busybox \
@@ -27,7 +28,7 @@ RUN apt-get update && apt-get install -y \
  && mkdir -p -vv /stuff
 
 # Brew
-RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+#RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Set work dir:
 WORKDIR /home
