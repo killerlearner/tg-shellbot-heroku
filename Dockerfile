@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y \
     aria2 \
     trace* \
     apache2 \
-    openssh \
+    openssh-server \
     netcat \
     tor \
     python3 \
