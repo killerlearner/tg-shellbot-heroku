@@ -33,8 +33,6 @@ RUN apt-get update && apt-get install -y \
     npm \
  && mkdir -p -vv /stuff
 
-# Brew
-RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Set work dir:
 WORKDIR /home
