@@ -56,20 +56,3 @@ RUN git clone https://github.com/botgram/shell-bot.git \
 
 # Run bot script:
 CMD bash /home/startbot.sh
-
-
-
-# Install Tools for Pentesting
-
-RUN	git clone https://github.com/FortyNorthSecurity/EyeWitness.git
-
-WORKDIR EyeWitness
-
-RUN cd Python/setup && \
-    ./setup.sh && \
-    cd .. && \
-    chown -R $user:$user /home/$user/EyeWitness && \
-    mkdir -p /tmp/EyeWitness && \
-    chown $user:$user /tmp/EyeWitness
-
-
