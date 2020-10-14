@@ -7,18 +7,12 @@ echo "NOTICE: extras.sh is runnning"
 
 
 apt-get install -q -y \
-    trace* \
-    golang \
     perl \
-    clang \
-    openssh-server \
+    openssh \
     netcat \
     tor \
     python3 \
     python3-pip \
     git \
-    make \
-    busybox \
-    build-essential \
     nodejs \
     npm \
