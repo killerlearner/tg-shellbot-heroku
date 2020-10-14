@@ -8,7 +8,6 @@ echo "NOTICE: extras.sh is runnning"
 
 apt-get install -q -y \
     perl \
-    openssh \
     netcat \
     tor \
     python3 \
