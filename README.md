@@ -2,14 +2,17 @@
 
 https://github.com/botgram/shell-bot
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/CypherpunkSamurai/tg-shellbot-heroku.git)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?)
 
 You can deploy without forking to test it out. I highly recommend forking this repo so that you can customise it as you want:
 
 ## Instructions:
+Auto:
 * Fork this repo
 * Go to: `https://heroku.com/deploy?template=https://github.com/<YOUR_USERNAME_HERE>/tg-shellbot-heroku`
 * Fill everything in and deploy
+
+Manual:
 * Go to: `https://dashboard.heroku.com/apps/<YOUR_HEROKU_APP_NAME>/resources` and turn on the worker
 * Go to: `https://dashboard.heroku.com/<YOUR_HEROKU_APP_NAME>/deploy/github`and connect your forked repo and enable auto-deploy
 * Edit your extras.sh and startup.sh, the app will redeploy everytime you edit stuff.
@@ -17,6 +20,14 @@ You can deploy without forking to test it out. I highly recommend forking this r
 
 ## extras.sh and startup.sh explained:
 A heroku dyno will restart every 24 hrs and resets everything. In order to make it start up quickly, the installation and startup scripts are separated.
+
+# RClone Config
+* Convert your rclone to base64
+'''cat rclone.conf | base64 > rclone_config.txt'''
+Auto:
+* Paste it during auto installation
+Manual:
+* Paste your rclone_config.txt in current folder
 
 ### extras.sh
 Everything you need to install, you need to write it into this file. By connecting your forked version of this repo and your heroku app, you can seamlessly redeploy everytime you add something in using github
