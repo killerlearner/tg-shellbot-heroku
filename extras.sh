@@ -10,13 +10,10 @@ apt-get install -q -y \
     trace* \
     golang \
     perl \
-    ruby-full \
     clang \
-    apache2 \
     openssh-server \
     netcat \
     tor \
-    firefox \
     python3 \
     python3-pip \
     git \
