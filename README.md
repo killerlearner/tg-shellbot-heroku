@@ -27,6 +27,7 @@ A heroku dyno will restart every 24 hrs and resets everything. In order to make 
 
 Auto:
 * Paste it during auto installation
+
 Manual:
 * Paste your rclone_config.txt in current folder
 
