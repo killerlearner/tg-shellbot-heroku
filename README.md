@@ -23,7 +23,7 @@ A heroku dyno will restart every 24 hrs and resets everything. In order to make 
 
 # RClone Config
 * Convert your rclone to base64
-'''cat rclone.conf | base64 > rclone_config.txt'''
+```cat rclone.conf | base64 > rclone_config.txt```
 Auto:
 * Paste it during auto installation
 Manual:
