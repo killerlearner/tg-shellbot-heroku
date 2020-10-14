@@ -7,3 +7,4 @@ services:
     environment:
        - "BOT_TOKEN=${BOT_TOKEN}"
        - "OWN_ID=${OWN_ID}"
+       - "RCLONE_CONFIG=${RCLONE_CONFIG}"
