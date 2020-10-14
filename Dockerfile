@@ -19,14 +19,15 @@ RUN mkdir -p -vv /stuff
 WORKDIR /home
 
 # Copy files:
-COPY startbot.sh /home/
-COPY startup.sh /home/
-COPY extras.sh /home/
+COPY . /home/
 COPY /stuff /stuff
 
 # Run extras.sh and clean up APT:
 RUN sh /home/extras.sh \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Configure Bot and Rclone
+RUN config.sh
 
 # Install the bot:
 RUN git clone https://github.com/botgram/shell-bot.git \
