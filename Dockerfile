@@ -1,7 +1,7 @@
 FROM phusion/baseimage:bionic-1.0.0
 
 # Use baseimage-docker's init system:
-CMD ["/sbin/my_init"]
+RUN ["/sbin/my_init"]
 
 # Install dependencies:
 RUN apt-get update && apt-get install -y \
@@ -12,28 +12,10 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     nmap \
-    golang \
-    perl \
-    ruby-full \
-    clang \
     wget \
-    aria2 \
-    trace* \
-    apache2 \
-    openssh-server \
-    netcat \
-    tor \
-    firefox \
-    python3 \
-    python3-pip \
-    git \
-    make \
-    busybox \
-    build-essential \
-    nodejs \
-    npm \
- && mkdir -p -vv /stuff
+    aria2
 
+RUN mkdir -p -vv /stuff
 
 # Set work dir:
 WORKDIR /home
