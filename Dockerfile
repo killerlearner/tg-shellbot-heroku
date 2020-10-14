@@ -1,7 +1,5 @@
-FROM phusion/baseimage:bionic-1.0.0
+FROM ubuntu:latest
 
-# Use baseimage-docker's init system:
-RUN ["/sbin/my_init"]
 
 # Install dependencies:
 RUN apt-get update && apt-get install -y \
