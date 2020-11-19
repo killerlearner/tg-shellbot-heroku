@@ -1,11 +1,15 @@
-FROM parrotsec/core:rolling
-ENV DEBIAN_FRONTEND noninteractive
-ENV VERSION 4.8-1
+FROM kalilinux/kali-rolling
 
-# Install components
-RUN apt-get update; apt-get -y dist-upgrade;apt-get -y install parrot-pico;apt-get -y install parrot-mini parrot-tools-cloud; rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -qq nodejs
+RUN apt-get -y update && apt-get -y upgrade && \
+   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+   kali-linux-large \
+   pciutils \
+   bash-completion && \
+   apt-get autoremove -y && \
+   apt-get clean
+
+RUN apt install nodejs npm
 
 RUN mkdir -p -vv /stuff
 
