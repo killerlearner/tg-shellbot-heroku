@@ -14,7 +14,8 @@
         "required":  "true"
       },
       "RCLONE_CONFIG": {
-        "description": "Base64 encoded rclone config here. ('cat rclone.conf | base64 > rclone_config_base64.txt')"
+        "description": "Base64 encoded rclone config here. ('cat rclone.conf | base64 > rclone_config_base64.txt')",
+        "required" : "false
       }
     }
   }
