@@ -1,18 +1,9 @@
-FROM ubuntu:latest
+FROM parrotsec/core:rolling
+ENV DEBIAN_FRONTEND noninteractive
+ENV VERSION 4.8-1
 
-
-# Install dependencies:
-RUN apt-get update && apt-get install -y \
-    bash \
-    curl \
-    sudo \
-    wget \
-    zip \
-    unzip \
-    nmap \
-    wget \
-    rclone \
-    aria2
+# Install components
+RUN apt-get update; apt-get -y dist-upgrade;apt-get -y install parrot-pico;apt-get -y install parrot-mini parrot-tools-cloud; rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p -vv /stuff
 
