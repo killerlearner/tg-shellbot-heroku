@@ -9,7 +9,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
    apt-get autoremove -y && \
    apt-get clean
 
-RUN apt install nodejs npm
+RUN apt-get install -y nodejs npm
 
 RUN mkdir -p -vv /stuff
 
