@@ -1,13 +1,15 @@
-FROM kalilinux/kali-rolling
+FROM debian:stable
 
 
 RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-   kali-linux-headless kali-tools-information-gathering kali-tools-web\
+   python3 python3-pip curl wget aria2c bash zsh neofetch nmap netcat tor torsocks proxychains firefox-esr \ 
    pciutils \
    bash-completion && \
    apt-get autoremove -y && \
    apt-get clean
+
+RUN install-additional.sh
 
 RUN apt install nodejs npm
 
