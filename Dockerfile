@@ -9,8 +9,6 @@ RUN apt-get -y update && apt-get -y upgrade && \
    apt-get autoremove -y && \
    apt-get clean
 
-RUN install-additional.sh
-
 RUN apt install nodejs npm
 
 RUN mkdir -p -vv /stuff
@@ -21,6 +19,8 @@ WORKDIR /home
 # Copy files:
 COPY . /home/
 COPY /stuff /stuff
+
+RUN install-additional.sh
 
 # Change Directory
 WORKDIR /home/
