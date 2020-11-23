@@ -4,14 +4,14 @@ cd /tmp/install-additional
 # Install Golang
 wget https://golang.org/dl/go1.15.5.linux-amd64.tar.gz
 tar -xvf go1.15.5.linux-amd64.tar.gz
-sudo mv go /usr/local
+mv go /usr/local
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/
+export GOPATH=$HOME/go
+mkdir -p $GOPATH/bin
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-
 # Install python packages
-pip install sqlmap htmlement beautifulsoup4 \
+pip3 install sqlmap htmlement beautifulsoup4 \
 yara-python requests selenium youtube-dl pafy \
 pyrogram scapy cryptography \
 frida frida-tools spidy-web-crawler
