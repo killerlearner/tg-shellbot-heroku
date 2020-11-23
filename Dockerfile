@@ -3,7 +3,7 @@ FROM kalilinux/kali-rolling
 
 RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-   kali-linux-headless kali-tools-fuzzing kali-tools-crypto-stego kali-tools-information-gathering kali-tools-exploitation kali-tools-web\
+   kali-linux-headless kali-tools-information-gathering kali-tools-web\
    pciutils \
    bash-completion && \
    apt-get autoremove -y && \
