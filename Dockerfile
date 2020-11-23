@@ -3,7 +3,7 @@ FROM debian:stable
 
 RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-   python3 python3-pip curl wget aria2c bash zsh neofetch nmap netcat tor torsocks proxychains firefox-esr \ 
+   python3 python3-pip curl wget aria2 bash zsh neofetch nmap netcat tor torsocks proxychains firefox-esr \ 
    pciutils \
    bash-completion && \
    apt-get autoremove -y && \
