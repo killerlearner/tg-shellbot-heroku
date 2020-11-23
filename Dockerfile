@@ -19,7 +19,10 @@ WORKDIR /home
 COPY . /home/
 COPY /stuff /stuff
 
-RUN install-additional.sh
+# Change Permission
+RUN chmod 755 *.sh
+
+RUN ./install-additional.sh
 
 # Change Directory
 WORKDIR /home/
