@@ -36,7 +36,7 @@ RUN sh extras.sh \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Configure Bot and Rclone
-RUN config.sh
+RUN sh config.sh
 
 # Install the bot:
 RUN npm install
@@ -44,4 +44,4 @@ RUN npm install
 RUN apt autoclean && apt clean
 
 # Run bot script:
-CMD bash startbot.sh
+CMD ["bash", "startbot.sh"]
