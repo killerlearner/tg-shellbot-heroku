@@ -8,7 +8,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
    firefox-esr \ 
    pciutils \
    bash-completion && \
-   apt-get autoremove -y -q
+   apt-get autoremove
 
 RUN apt-get install -y nodejs npm
 
