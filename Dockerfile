@@ -5,6 +5,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
    python3 python3-pip curl wget aria2 bash zsh git golang\
    neofetch nmap netcat tor torsocks proxychains \
+   libcurl4 libcurl4-openssl-dev jq \
    firefox \ 
    pciutils \
    bash-completion && \
