@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 RUN apt-get -y update && apt-get -y upgrade && \
    DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
-   python3 python3-pip curl wget aria2 bash zsh golang\
+   python3 python3-pip curl wget aria2 bash zsh git golang\
    neofetch nmap netcat tor torsocks proxychains \
    firefox-esr \ 
    pciutils \
